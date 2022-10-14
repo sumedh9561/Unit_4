@@ -1,0 +1,68 @@
+Q3. Explain the difference between comparable and comparator.
+Ans:
+
+Comparable:
+Comparable provides a single sorting sequence. In other words, we can sort the
+collection on the basis of a single element such as id, name, and price.
+Comparable affects the original class, i.e., the actual class is modified.
+Comparable provides compareTo() method to sort elements.
+Comparable is present in java.lang package.
+We can sort the list elements of Comparable type by Collections.sort(List) method.
+
+example:
+public class Sample_String {
+    public static void main(String[] args) {
+        String str_Sample = "a";
+        System.out.println("Compare To 'a' b is : " + str_Sample.compareTo("b"));
+        str_Sample = "b";
+        System.out.println("Compare To 'b' a is : " + str_Sample.compareTo("a"));
+        str_Sample = "b";
+        System.out.println("Compare To 'b' b is : " + str_Sample.compareTo("b"));
+    }
+}
+output:
+Compare To 'a' b is : -1
+Compare To 'b' a is : 1
+Compare To 'b' b is : 0
+
+Comparator:
+The Comparator provides multiple sorting sequences. In other words,
+we can sort the collection on the basis of multiple elements such as id, name, and price etc.
+Comparator doesn't affect the original class, i.e., the actual class is not modified.
+Comparator provides compare() method to sort elements.
+A Comparator is present in the java.util package.
+We can sort the list elements of Comparator type by Collections.sort(List, Comparator) method.
+
+example:
+import java.lang.Integer;
+
+public class example {
+
+    public static void main(String args[])
+    {
+        int x = 20;
+        int y = 30;
+
+        // as 10 less than 20,
+        // Output will be a value less than zero
+        System.out.println(Integer.compare(x, y));
+
+        int p = 40;
+        int q = 40;
+
+        // as 30 equals 30,
+        // Output will be zero
+        System.out.println(Integer.compare(p, q));
+
+        int r = 20;
+        int s = 7;
+
+        // as 15 is greater than 8,
+        // Output will be a value greater than zero
+        System.out.println(Integer.compare(r, s));
+    }
+}
+output:
+-1
+0
+1
