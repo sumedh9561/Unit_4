@@ -1,0 +1,63 @@
+
+
+Question 2:
+Briefly explain the difference between Early and Late Binding with examples.
+
+
+Ans:-
+     There are two types of binding in Java – early (or static) binding and late (or dynamic) binding.
+     This post provides an overview of the differences between the two.
+
+     * The early binding happens at the compile-time and late binding happens at the run time.
+
+     * The normal method calls and overloaded method calls are examples of early binding, while reflection
+       and method overriding (run time polymorphism) are examples of late binding.
+
+     * The binding of private, static, and final methods happens at the compile-time as they cannot be overridden.
+
+     * The major advantage of late binding is its flexibility since a single method can handle different types of
+       objects at run time. This significantly reduces the size of the codebase and makes the code more readable.
+
+     * Since all information needed to call a method is available before run time, early binding results in faster
+       execution of a program. While for later binding, a method call is not resolved until run time, resulting in
+       somewhat slower execution of code.
+
+     * In early binding, the method definition and the method call are linked during the compile time. This happens
+       when all information needed to call a method is available at the compile time.Unlike early binding, the method
+       calls are not resolved until run time in late binding as we cannot determine all information needed for a method
+       call at compile time. So the method definition and a method call are not bound until run time.
+
+       class Bird
+       {
+           void Fly() {
+               System.out.println("Bird Fly");
+           }
+
+           static void NotFly() {
+               System.out.println("Bird NotFly");
+           }
+       }
+
+       class parrot extends Bird
+       {
+           @Override
+           void Fly() {
+               System.out.println("parrot Fly");
+           }
+
+           static void NotFly() {
+               System.out.println("parrot NotFly");
+           }
+       }
+
+       class Main
+       {
+           public static void main(String[] args)
+           {
+               // `parrot` extends `Bird`
+               Bird bird = new parrot();
+
+               Bird.Fly();
+               Bird.NotFly();
+           }
+       }
