@@ -1,0 +1,10 @@
+
+
+Q1) Explain why Java is platform independent ?
+Ans:-
+      Java is a platform independent because it uses a virtual machine .
+      The jav programming language and all APIs are complicated into bytecodes.
+      Bytes are effectively platform independent. The virtual machine take care of
+      the different platforms. The run time requirements for java are therefore very small.
+      The java virtual machine take care of all hardware related issues so that code has be
+      complied for different hardware.
