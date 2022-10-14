@@ -1,0 +1,139 @@
+
+
+Q.1) What is the use of ‘this’ and ‘super’ keywords in java ? Explain with an example.
+
+Ans:
+
+super and this keywords in Java
+In java, super keyword is used to access methods of the parent class while this is used
+to access methods of the current class this keyword is a reserved keyword in java i.e.,
+we can’t use it as an identifier. It is used to refer current class’s instance as well
+as static members. It can be used in various contexts as given below:
+
+•	to refer instance variable of current class
+•	to invoke or initiate current class constructor
+•	can be passed as an argument in the method call
+•	can be passed as argument in the constructor call
+•	can be used to return the current class instance
+Example
+
+// Program to illustrate this keyword
+// is used to refer current class
+class RR {
+    // instance variable
+    int a = 10;
+
+    // static variable
+    static int b = 20;
+
+    void GFG ()
+    {
+        // referring current class (i.e, class RR)
+        // instance variable(i.e, a)
+        this. A = 100;
+
+        System.out.println(a);
+
+        // referring current class(i.e, class RR)
+        // static variable(i.e, b)
+        this.b = 600;
+
+        System.out.println(b);
+    }
+
+    public static void main(String[] args)
+    {
+        // Uncomment this and see here you get
+        // Compile Time Error since cannot use
+        // 'this' in static context.
+        // this.a = 700;
+        new RR().GFG();
+    }
+}
+Output
+100
+600
+super keyword
+1.	super is a reserved keyword in java i.e., we can’t use it as an identifier.
+2.	super is used to refer super-class’s instance as well as static members.
+3.	super is also used to invoke super-class’s method or constructor.
+4.	super keyword in java programming language refers to the superclass of the class where the super keyword is currently being used.
+5.	The most common use of super keyword is that it eliminates the confusion between the super classes and subclasses that have methods with same name.
+super can be used in various contexts as given below:
+	it can be used to refer immediate parent class instance variable
+	it can be used to refer immediate parent class method
+	it can be used to refer immediate parent class constructor.
+
+
+Example
+// Program to illustrate super keyword
+// refers super-class instance
+
+class Parent {
+    // instance variable
+    int a = 10;
+
+    // static variable
+    static int b = 20;
+}
+
+class Base extends Parent {
+    void rr()
+    {
+        // referring parent class (i.e, class Parent)
+        // instance variable (i.e, a)
+        System.out.println(super.a);
+
+        // referring parent class(i.e, class Parent)
+        // static variable (i.e, b)
+        System.out.println(super.b);
+    }
+
+    public static void main (String[] args)
+    {
+        // Uncomment this and see here you get
+        // Compile Time Error since cannot use 'super'
+        // in static context.
+        // super.a = 700;
+        new Base (). rr();
+    }
+}
+Output
+10
+20
+Similarities in this and super
+	We can use this as well as super anywhere except static area. Example of this is already shown above where we use this as well as super inside public static void main (String[]args) hence we get Compile Time Error since cannot use them inside static area.
+	We can use this as well as super any number of times in a program.
+	Both are non-static keyword.
+
+Now, we use both this() and super() in the same constructor,
+   An interesting thing to note here is that according to Java guidelines, this () or super () must be the first statement in the constructor block for it to be executed. So, we cannot have them together in the same constructor as both need to be the first statement in the block for proper execution, which is not possible. Trying to do so would raise a compiler error.
+Example:-
+class Vehicle {
+    Vehicle() { System.out.println("Vehicle is created."); }
+}
+
+class Bike extends Vehicle {
+    Bike() { System.out.println("Bike is created."); }
+
+    Bike(String brand)
+    {
+        super(); // it calls Vehicle(), the parent class
+                 // constructor of class Bike
+        this();
+        System.out.println("Bike brand is " + brand);
+    }
+}
+
+public class GFG {
+    public static void main(String args[])
+    {
+        Bike bike = new Bike("Honda");
+    }
+}
+On running the above program, we get an error on line number 12 saying that “call to this must be first statement in constructor”. This is because we tried using both super() and this() together. While super() was the first line of the constructor, this() statement violated the condition that it should be the first line, hence raising an error.
+Compile Errors:
+prog.java:12: error: call to this must be first statement in constructor
+        this();
+
+1 error.
