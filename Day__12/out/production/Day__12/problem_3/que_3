@@ -1,0 +1,149 @@
+
+
+abstract class:
+-----------------
+
+abstract method: ---these types of methods does not have a body.
+
+Note: -inside a normal class (concreate class) we can not have an abstract method.
+
+
+abstract Animal:
+
+eat()
+sleep()
+walk()
+abstract makeNoise()
+
+
+Dog	Cat	Tiger 	Lion
+
+
+Dog tommy = new Dog();
+Animal tommy = new Dog();
+
+Animal tommy = new Animal();//can't instantiate the abstract class
+
+
+--if we want that no one can create the object of a perticular class then
+ we should mark that class as an abstract class.
+
+--for an abstract class no body can create its object directly.
+Animal tommy = new Animal();//can't instantiate the abstract class
+
+
+1. abstract class may or may not have any abstract method. An Empty class
+ is also a valid abstract class.
+
+
+only 2 diff bt a normal (concreate class ) and an abstract class:
+-----------------------------------------------------------------------
+1. for normal class we can create its object whenever we want. whereas
+for an abstract class we can not create its object.
+
+2.normal class can not have any abstract method, but an abstract class
+ may have an abstract method also.
+
+Note: --Abstract class does not have any meaning, until it is extended
+ by the child class.
+
+****Rule:  if any class try to extend an abstract class then that child
+class must override all the abstract methods of that abstract class,
+otherwise we need to mark that child class also as an abstract class.
+
+Normal or concreate class
+
+A a1 =  new A();
+A a1 =  new AChild();
+A a1 =  null;
+
+Q3) Explain the difference between abstract class and interface.
+
+Ans:-
+
+Abstract class :
+
+Abs a1 = ?
+
+Abs a1 = new Abs(); // CE
+Abs a1 = new AbsChild();
+Abs a1 = null;
+
+
+
+Note: abstract keyword and final keyword can not be live together.
+
+
+Interface:
+========
+
+interface X {
+
+}
+
+for all the below 3 structures in java we can generate a .class file and we can define
+ a reference variable also.
+
+1.normal or concreate class (full implemented structure) (all method will have a body)
+2.abstract class  (partial implemented structure) (methods of this structure may or may
+ not have a body)
+3.interface   (full unimplemented structure) (all methods will be the abstract method)
+
+
+Normal or concreate class
+
+A a1 =  new A();
+A a1 =  new AChild();
+A a1 =  null;
+
+
+Abstract class :
+
+Abs a1 = ?
+
+Abs a1 = new Abs(); // CE
+Abs a1 = new AbsChild();
+Abs a1 = null;
+
+interface :
+
+X x1 = new X(); //CE
+X x1 = null;
+X x1 = new XImpl();
+
+
+Example:
+
+Intr.java:
+----------
+
+package com.masai;
+
+public interface Intr {
+
+	public abstract void funX();
+	public abstract void funY();
+
+}
+
+
+Note: inside an interface if we place any abstract method, then that method is
+ by default "public and abstract"
+whether we mention or not.
+
+the above interface we can write in following way also:
+
+package com.masai;
+
+public interface Intr {
+
+	 void funX();
+	void funY();
+
+}
+
+Note: If any class implements an interface ,then that class must override
+ all the abstract methods defined inside that interface otherwise we need
+  to mark that implemented class as an abstract class.
+
+with the help of an interface we also achive Is-A relationship.
