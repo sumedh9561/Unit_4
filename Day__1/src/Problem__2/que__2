@@ -1,0 +1,25 @@
+
+
+Q2) Write the difference between JSE, JEE and JME?
+
+ Ans :-
+        JSE :- java standard edition, JSE. It allows the development
+               and deployment of java applications used in desktops, servers,
+               embedded environments and real-time environments. java SE contains
+               classes developed for java web services and provides a foundation
+               for java platform and enterprise edition (JEE).
+
+       JEE :-java enterprise edition, JEE. Enterprise Edition helps develop and
+               deploy portable, robust, scalable and secure server-side java applications.
+               Java EE is built on the basis of java SE. It provides Web services, component
+               models, management and communication APIs, which can be used To achieve enterprise-level
+               service-oriented architecture (service oriented architecture, SOA) and Web 2.0 applications.
+
+       JME :- java mirco edition, JME. Provide a robust and flexible environment for
+              applications running on mobile devices and embedded devices (such as
+              mobile phones, PDAs, TV set-top boxes, and printers). Java ME includes
+              a flexible user interface, a robust security model, many built-in network
+              protocols, and rich support for networked and offline applications that can
+              be downloaded dynamically. Applications based on the Java ME specification
+              only need to be written once and can be used for many devices, and can take
+              advantage of the native functions of each device.

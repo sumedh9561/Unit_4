@@ -1,0 +1,9 @@
+
+
+Q4) What are features of Java and explain them?
+
+Ans :-Java is guaranteed to be write-once, run-anywhere language.
+      On compilation Java program is compiled into bytecode. This
+      bytecode is platform independent and can be run on any machine,
+      plus this bytecode format also provide security. Any machine with
+      Java Runtime Environment can run Java Programs.

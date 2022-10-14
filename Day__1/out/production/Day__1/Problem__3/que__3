@@ -1,0 +1,7 @@
+
+
+Q3) How does java achieve platform independency?
+
+Ans :-Java is platform-independent because it uses a virtual machine.
+      The Java programming language and all APIs are compiled into bytecodes.
+       Bytecodes are effectively platform-independent.
