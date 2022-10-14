@@ -1,0 +1,32 @@
+
+Q2.Explain about Hashcode and Equals Method.
+
+Ans:-
+      The hashcode() and equals() are two important methods provided by the object class in the parent class
+      for comparing objects. the object class is the parent class for all java objeccts.
+
+      Equals()
+
+      The java equals() is a method of lang.object class and it is used to campare two object.
+      to compare two object that wheather they are the same,ir compares the values of both the
+      object attributes.
+      by default two objects will be the same only if stored in the same memmory location
+      generate contrat of equale(),methods
+      * reflexive
+      * symmentric
+      * transitive
+      * consistent
+
+       Syntax:
+      public boolean equals(Object obj)
+
+      hashcode()
+
+     A hash mode is an integer value associated with every object in java, facilititing the hashing in hash table.
+     to get this hashcode valie for an object,we can used the hashcode ethod in java means hashcode method that return ther
+     integer hashcode vcalue of the given object
+     The hashomode method return the same hash value when called on the two object  which are according to the equals method
+     and if the object are unequal it usually return diffrent hash values.
+
+     syntax
+    public int hashcode()
